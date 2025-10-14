@@ -1,0 +1,70 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(43, 35, 35);
+    padding: 10px;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;   
+    gap: 10px; 
+    margin: 15px;
+    padding: 0;      
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgb(158, 154, 154);
+    border-radius: 5px;
+}
+
+main, section{
+    padding-top: 50px;
+    align-items: center;
+    display: flex;
+}
+
+main{
+    padding-top: 60px;
+}
+
+main h1{
+    padding-left: 10px;
+}
+
+main, p{
+    padding-left: 5px;
+}
+
+#homeImg{
+    width: 40%;
+    height: 40%;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+#overviewContainer{
+    margin: 40px;
+}
