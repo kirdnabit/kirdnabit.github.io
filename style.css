@@ -1,8 +1,21 @@
+/* Clear defualt styling */
 body, ul {
     margin: 0;
     padding: 0;
 }
+/*Making sure that the footer is always pushed down*/
+html, body{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
+main{
+    flex: 1;
+}
+
+/*TOC/Navigation Bar*/
 .navbar {
     position: fixed;
     top: 0;
@@ -12,27 +25,31 @@ body, ul {
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(43, 35, 35);
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 5px 20px;
     width: 100%;
 }
 
 .logo {
     color: white;
     font-size: 24px;
+    padding-top: 10px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;   
     gap: 10px; 
-    margin: 15px;
-    padding: 0;      
+    margin: 0px;
+    padding: 0;  
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
 
 .nav-links a:hover {
@@ -40,14 +57,20 @@ body, ul {
     border-radius: 5px;
 }
 
-main, section{
+/*Style introduction*/
+#intro{
     padding-top: 50px;
     align-items: center;
     display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 main{
-    padding-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 90px;
 }
 
 main h1{
@@ -65,6 +88,226 @@ main, p{
     padding-right: 5px;
 }
 
-#overviewContainer{
-    margin: 40px;
+/*Style table for key terms*/
+#keyTerms{
+    margin: 30px;
+    padding-top: 0px;
+    border: 3px solid rgb(145, 141, 141);
+}
+
+#keyTerms h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#keyTerms table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#keyTerms th{
+    background-color:  rgb(43, 35, 35);
+    color: whitesmoke;
+    text-align: left;
+    padding: 10px;
+    border: 2px solid rgb(145, 141, 141);
+}
+
+#keyTerms td{
+    border: 2px solid rgb(145, 141, 141);
+    border-collapse: collapse;
+    padding: 10px;
+
+}
+
+/*Footer*/
+footer{
+  position: relative;
+  width: 100%;
+  background-color: rgb(43, 35, 35);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/*History page*/
+#historyBody {
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#historyBody h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*Proto-Gaze*/
+#proto-gaze {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#proto-gaze p {
+    flex: 1;
+    margin: 0;
+}
+
+#proto-gaze figure {
+    flex: 0 0 300px;           
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5px;     
+}
+
+#proto-gaze img {
+    width: 100%;               
+    height: auto;
+    border-radius: 5px;
+}
+
+#proto-gaze figcaption {
+    text-align: right;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/*Shoegaze Breaks Through*/
+#breakThrough {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#breakThrough p {
+    flex: 1;                   
+    margin: 0;
+    text-align: center;
+}
+
+#breakThrough figure {
+    flex: 0 0 250px;           
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    margin: 0;
+}
+
+#breakThrough img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#breakThrough figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/*Modern-Gaze*/
+#modern-gaze {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    gap: 20px;                 
+}
+
+#modern-gaze p {
+    margin: 0;
+    width: 80%;
+    text-align: center;
+}
+
+#modern-gaze figure {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+#modern-gaze img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#modern-gaze figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/*Recommendations page*/
+#recsbody{
+   padding-top: 10px;
+}
+
+/*Concepts page*/
+#conceptsBody {
+  padding: 60px 30px;
+}
+
+#conceptsBody h1,
+#conceptsBody h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#pedalboard{
+    width: 50%;
+    height: auto;
+
+}
+
+#kevin {
+    width: 50%;
+    height: auto;
+}
+
+#resourcesBody {
+  padding: 60px 30px;
+  text-align: center; /* center headings */
+}
+
+/* Headings */
+#resourcesBody h1 {
+  margin-bottom: 40px;
+}
+
+#resourcesBody h2 {
+  margin-bottom: 15px;
+}
+
+/* Lists */
+#resourcesBody ul {
+  list-style: none;      
+  margin: 0 auto 40px auto; 
+  max-width: 700px;       
+}
+
+#resourcesBody li {
+  margin-bottom: 10px;
+}
+
+
+#resourcesBody a {
+  text-decoration: none;
+  color: rgb(43, 35, 35);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#resourcesBody a:hover {
+  color: rgb(221, 182, 182);
 }
