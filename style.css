@@ -256,8 +256,22 @@ footer{
 #proto-recs{
     display: flex;
     gap: 10px;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#classic-recs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#modern-recs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 /*Concepts page*/
