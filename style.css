@@ -253,6 +253,13 @@ footer{
    padding-top: 10px;
 }
 
+#proto-recs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
 /*Concepts page*/
 #conceptsBody {
   padding: 60px 30px;
