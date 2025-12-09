@@ -6,15 +6,16 @@
 }
 
 html, body {
-    margin: 0;
+     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: 'Inter',system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.5;
     color: #111;
-    background-color: #f8f0f3;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1,h2,h3{
@@ -132,7 +133,7 @@ main, p{
 
 /*Style table for key terms*/
 #keyTerms{
-    margin: 30px;
+    margin: 30px auto;
     padding-top: 0px;
     border: 3px solid rgb(145, 141, 141);
 }
@@ -731,6 +732,7 @@ footer{
     .navbar {
         position: static;
         width: 100%;
+        margin-left: 0;
     }
 
     /* Navbar: stack links vertically */
@@ -756,15 +758,15 @@ footer{
         margin: 10px;
     }
 
-    /* Key terms table: make it scroll horizontally instead of overflowing */
+    /* Key terms table */
     #keyTerms {
-        margin: 15px;
+        margin: 20px 10px;
+        overflow-x: auto;   
     }
 
     #keyTerms table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        width: 100%;
+        border-collapse: collapse;
     }
 
     /* History body a bit tighter */
