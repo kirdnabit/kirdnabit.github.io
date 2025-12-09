@@ -1,36 +1,54 @@
 // Questions
 const questions = [
     {
-        type: "text",
-        question: "1. Fill in the blank: What is an example answer?",
-        correct: "example"
+       type: "text",
+        question:
+            "1. Fill in the blank: My Bloody Valentine's landmark 1991 album that helped define shoegaze is called ________.",
+        correct: "Loveless"
     },
     {
         type: "mc",
-        question: "2. Which option is correct?",
-        choices: ["A", "B", "C"],
+        question: "2. In typical shoegaze mixing, how are vocals usually treated?",
+        choices: [
+            "They are loud, clear, and placed above all instruments.",
+            "They are mixed lower and used as another textural layer.",
+            "They are removed entirely so the focus is only on guitars."
+        ],
         correct: 1
     },
     {
         type: "mc",
-        question: "3. Choose the correct answer:",
-        choices: ["Option A", "Option B", "Option C"],
+        question: "3. Why did British music critics start calling the genre “Shoegaze”?",
+        choices: [
+            "Because fans at shows stared at their shoes in boredom.",
+            "Because musicians played barefoot on stage.",
+            "Because guitarists spent shows looking down at their effects pedals on the floor."
+        ],
         correct: 2
     },
     {
         type: "mc",
-        question: "4. Another multiple-choice question:",
-        choices: ["Choice 1", "Choice 2", "Choice 3"],
+        question: "4. Which of the following is often cited as an early proto-shoegaze album?",
+        choices: [
+            "Pornography by The Cure",
+            "Nevermind by Nirvana",
+            "OK Computer by Radiohead"
+        ],
         correct: 0
     },
     {
         type: "multi",
-        question: "5. Multi-select: Choose all that apply:",
-        choices: ["A", "B", "C", "D"],
-        correct: [0, 2]
+        question:
+            "5. Multi-select: Which of the following effects are especially important for creating shoegaze guitar tones?",
+        choices: [
+            "Reverb",
+            "Delay",
+            "Distortion",
+            "Auto-Tune"
+        ],
+        correct: [0, 1, 2]
     }
 ];
-
 // State
 let curQuestion = 0;
 let userAnswers = [];
@@ -147,3 +165,12 @@ function nextQuestion() {
 // Init
 loadQuestion();
 submitBtn.onclick = nextQuestion;
+
+// Allow Enter key to submit/advance quiz
+document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            submitBtn.click();
+        }
+    }
+);
